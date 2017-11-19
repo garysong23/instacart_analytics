@@ -16,7 +16,6 @@ def build_query(begin_date, end_date):
     GROUP BY strftime('%W', created_at), workflow_state
     ORDER BY week ASC
   ''').format(begin_date, end_date)
-  print(query)
   return query
 
 def excute_query(query):
